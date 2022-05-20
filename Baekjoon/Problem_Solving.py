@@ -26,3 +26,24 @@ n = int(input())
 print('어느 한 컴퓨터공학과 학생이 유명한 교수님을 찾아가 물었다.')
 fib(n)
 
+
+# # 2447
+
+# In[53]:
+
+
+c = int(input())
+nl = list(map(int, input().split()))
+check = 0
+count = 0
+
+for i in nl:
+    for j in range(1,1000+1):
+        if i % j == 0:
+            check += 1
+    if check == 2:
+        count += 1
+    check = 0
+
+print(count)
+
