@@ -47,3 +47,29 @@ for i in nl:
 
 print(count)
 
+
+# In[9]:
+
+
+st = int(input())
+ed = int(input())
+pnl = []
+
+while st <= ed:
+    count = 0
+    
+    for i in range(1,st+1):
+        if st % i == 0:
+            count += 1
+            
+    if count == 2:
+        pnl.append(st)
+    
+    st += 1
+
+if not pnl:
+    print(-1)
+else:
+    print(sum(pnl))
+    print(min(pnl))
+
