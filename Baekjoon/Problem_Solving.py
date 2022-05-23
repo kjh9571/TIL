@@ -48,6 +48,8 @@ for i in nl:
 print(count)
 
 
+# # 2581
+
 # In[9]:
 
 
@@ -72,4 +74,34 @@ if not pnl:
 else:
     print(sum(pnl))
     print(min(pnl))
+
+
+# # 11653
+
+# In[15]:
+
+
+N = n = int(input())
+
+while N != 1:
+    for i in range(2,n+1):
+        if N % i == 0:
+            print(i)
+            N //= i
+            break
+
+
+# In[18]:
+
+
+## 11653 숏코딩
+N=int(input())
+a=2
+
+while N>1:
+    if N%a: # N % a의 값이 0이 아니면 들어가는 조건문
+        a+=1
+    else:
+        print(a)
+        N/=a
 
