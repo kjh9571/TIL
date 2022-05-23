@@ -105,3 +105,25 @@ while N>1:
         print(a)
         N/=a
 
+
+# # 1929
+
+# In[9]:
+
+
+def isPrime(x):
+    if x == 1:
+        return False
+    else:
+        for i in range(2, int((x+1)**0.5)+1):
+            if x % i == 0:
+                return False
+                
+    return True
+        
+st, ed = map(int, input().split())
+
+for i in range(st, ed + 1):
+    if isPrime(i):
+        print(i)
+
