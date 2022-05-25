@@ -127,3 +127,38 @@ for i in range(st, ed + 1):
     if isPrime(i):
         print(i)
 
+
+# # 4948
+
+# In[5]:
+
+
+def isPrime(x):
+    if x == 1:
+        return False
+    else:
+        for i in range(2, int((x+1)**0.5)+1):
+            if x % i == 0:
+                return False
+    return True
+
+pn = []
+ctl = []
+
+for i in range(2,246912+1):
+    if isPrime(i):
+        pn.append(i) 
+        
+while True:
+    n = int(input())
+    if n == 0:
+        break
+        
+    count = 0
+    for i in pn:
+        if n < i <= 2*n:
+            count += 1
+    ctl.append(count)
+    
+print(*ctl, sep = '\n')     
+
