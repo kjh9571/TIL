@@ -162,3 +162,33 @@ while True:
     
 print(*ctl, sep = '\n')     
 
+
+# #  9020
+
+# In[4]:
+
+
+def isPrime(x):
+    if x == 1:
+        return False
+    else:
+        for i in range(2, int((x+1)**0.5)+1):
+            if x % i == 0:
+                return False
+    return True
+
+g = []
+case = int(input())
+
+while case != 0:
+    n = int(input())
+    n1 = n // 2
+    while True:
+        if isPrime(n1) and isPrime(n-n1):
+            g.append(f'{n1} {n-n1}')
+            break
+        n1 -= 1
+    case -= 1
+
+print(*g, sep = '\n')
+
