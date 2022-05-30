@@ -45,3 +45,21 @@ while case != 0:
 for i in result:
     print(f'#{result.index(i) + 1} {i}') 
 
+
+# # 2071
+
+# In[9]:
+
+
+case = int(input())
+res = []
+
+while case != 0:
+    nl = list(map(int, input().split()))
+    avg = (sum(nl)) / len(nl)
+    res.append(int(round(avg, 0)))
+    case -= 1
+    
+for i in range(len(res)):
+    print(f'#{i+1} {res[i]}')
+
