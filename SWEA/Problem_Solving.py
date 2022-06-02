@@ -63,3 +63,25 @@ while case != 0:
 for i in range(len(res)):
     print(f'#{i+1} {res[i]}')
 
+
+# # 2070
+
+# In[ ]:
+
+
+case = int(input())
+res = []
+
+while case != 0:
+    a, b = map(int, input().split())
+    if a > b:
+        res.append('>')
+    elif a < b:
+        res.append('<')
+    else:
+        res.append('=')
+        
+
+for i in range(1, len(res)+1):
+    print(f'#{i} {res[i]})
+
