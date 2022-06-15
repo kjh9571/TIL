@@ -83,5 +83,34 @@ while case != 0:
         
 
 for i in range(1, len(res)+1):
-    print(f'#{i} {res[i]})
+    print(f'#{i} {res[i]}')
+
+
+# # 1206
+
+# In[15]:
+
+
+cl = []
+
+while True:
+    length = int(input())
+    hl = list(map(int,input().split()))
+    count = 0
+
+    for i in range(len(hl)):
+        if hl[i] == 0:
+            continue
+        else:
+            if (hl[i] > hl[i-1]) and (hl[i] > hl[i-2]) and (hl[i] > hl[i+1]) and (hl[i] > hl[i+2]):
+                nl = [hl[i-2], hl[i-1], hl[i+1], hl[i+2]]
+                count += hl[i] - max(nl)
+
+    cl.append(count)
+    
+    if len(cl) == 10:
+        break
+
+for i in range(len(cl)):
+    print(f'#{i+1} {cl[i]}')
 
