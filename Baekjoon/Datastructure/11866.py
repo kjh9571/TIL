@@ -44,22 +44,22 @@ n, k = map(int, input().split())
 circle = deque([i for i in range(1, n+1)])
 josephus = deque([])
 
+# print(f'init_circle : {circle}')
+
 while True:
     if n == 1:
-        josephus.append(1)
+        josephus = deque([1])
         break
     
-    for i in range(len(circle)):
+    for i in range(k):
         if i == k-1:
-            break
+            josephus.append(circle.popleft())
         else:
             circle.append(circle.popleft())
-             
-    josephus.append(circle.popleft())
     
     if len(josephus) == n:
         break
-    
+
 print("<", end='')
 for i in range(len(josephus)-1):
     print(f'{josephus[i]}', end=', ')
