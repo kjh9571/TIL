@@ -1,5 +1,3 @@
-import sys
-
 n = int(input())
 numpad = [(list(map(int, input().split()))) for i in range(n)]
 graph = [[0 for i in range(n)] for i in range(n)]
