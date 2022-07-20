@@ -1,7 +1,7 @@
 c = int(input())
 n = int(input())
 net = [[] for i in range(c+1)]
-result = []
+result = set([])
 
 for i in range(n):
     a, b = map(int, input().split())
@@ -16,7 +16,7 @@ def search(idx):
         if i in result:
             continue
         else:
-            result.append(i) 
+            result.add(i) 
             search(i)
             
 search(1)
